@@ -1,0 +1,16 @@
+ORIG_PN="htmlentities"
+inherit ruby
+
+DESCRIPTION="Ruby HTML entities library"
+HOMEPAGE="http://htmlentities.rubyforge.org/"
+SRC_URI="mirror://rubyforge/htmlentities/${ORIG_PN}-${PV}.tar.gz"
+
+src_compile() {
+	ruby_rdoc_compile ${S}/lib
+}
+
+src_install() {
+	cd ${S}
+	doruby lib/*
+	dordoc HTMLEntities
+}
