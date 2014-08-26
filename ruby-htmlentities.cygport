@@ -9,6 +9,8 @@ DESCRIPTION="HTMLEntities is a simple library to facilitate encoding and
 decoding of named (&yacute; and so on) or numerical (&#123; or &#x12a;)
 entities in HTML and XHTML documents."
 
+ARCH=noarch
+
 PKG_NAMES="${NAME} ${NAME}-doc"
 ruby_htmlentities_CONTENTS="${RUBYGEM_INSTDIR#/} ${RUBYGEM_SPEC#/}"
 ruby_htmlentities_doc_CONTENTS=${RUBYGEM_DOCDIR#/}
