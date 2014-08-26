@@ -1,10 +1,14 @@
 inherit rubygem
 
 NAME="ruby-htmlentities"
-VERSION=4.3.1
+VERSION=4.3.2
 RELEASE=1
 CATEGORY="Ruby"
 SUMMARY="Ruby (X)HTML entity encode/decode library"
 DESCRIPTION="HTMLEntities is a simple library to facilitate encoding and
 decoding of named (&yacute; and so on) or numerical (&#123; or &#x12a;)
 entities in HTML and XHTML documents."
+
+PKG_NAMES="${NAME} ${NAME}-doc"
+ruby_htmlentities_CONTENTS="${RUBYGEM_INSTDIR#/} ${RUBYGEM_SPEC#/}"
+ruby_htmlentities_doc_CONTENTS=${RUBYGEM_DOCDIR#/}
